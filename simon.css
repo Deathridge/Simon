@@ -1,0 +1,155 @@
+html,body {
+	height: 100%;
+	width: 100%;
+	margin:0;
+}
+.green {
+	background-color: green;
+	border-top-left-radius: 100%;
+	width: 200px;
+	height:200px;
+	position: relative;
+	display:inline-block;
+	border: 12px solid #333;
+}
+
+.green:active,
+.green.light {
+	background-color: #00FF00;
+}
+
+.red {
+	background-color: red;
+	border-top-right-radius: 100%;
+	width: 200px;
+	height:200px;
+	position: relative;
+	display:inline-block;
+	border: 12px solid #333;
+}
+
+.red:active,
+.red.light {
+	background-color: #FFCCCB;
+}
+
+.yellow {
+	background-color: yellow;
+	border-bottom-left-radius: 100%;
+	width: 200px;
+	height:200px;
+	position: relative;
+	display:inline-block;
+	border: 12px solid #333;
+}
+
+.yellow:active,
+.yellow.light {
+	background-color: lightyellow;
+}
+
+.blue {
+	background-color: blue;
+	border-bottom-right-radius: 100%;
+	width: 200px;
+	height:200px;
+	position: relative;
+	display:inline-block;
+	border: 12px solid #333;
+}
+
+.blue:active,
+.blue.light {
+	background-color: lightblue;
+}
+
+.panel-item {	
+	text-align: center;
+	display:inline-block;
+}
+
+.centre {
+	border-radius: 100%;
+	background-color: lightgray;
+	height: 200px;
+	width: 200px;
+	z-index:100;
+	position:absolute;
+	top:50%;
+	left:50%;	
+	text-align: center;
+	margin: -135px 0 0 -100px;
+}
+
+.wrapper {
+	position: relative;
+	height:500px;
+	width:500px;
+	text-align: center;
+	margin:auto;
+	top: 10vh;
+	border-radius: 100%;
+	
+}
+
+@media screen and (max-width: 500px){
+	.wrapper {
+		transform: scale(0.7);
+		margin-left: -250px;
+		left:50%;
+	}
+}
+
+.panel-total {
+	position: relative;
+	top: 12px;
+}
+
+.start {
+	height:25px;
+	width:25px;
+	border-radius: 100%;
+	background-color: grey;
+	box-shadow: 1px 1px 1px 1px black;
+	margin: 50px 0 0 50px;
+}
+
+.start-text {
+	float:left;
+	padding-left: 47px;
+	padding-top: 5px;
+}
+
+.start:active{
+	background-color: lightgrey;
+}
+
+.strict {
+	height:10px;
+	width: 10px;
+	border-radius: 100%;
+	background-color: red;
+	box-shadow: 1px 1px 1px 1px black;
+	margin: 30px 0 0 55px;
+}
+
+.strict-text {
+	float:left;
+	padding-left: 47px;
+	padding-top: 5px;
+}
+
+.strict:active{
+	background-color: #FFCCCB;
+}
+
+.counter {
+	background-color: black;
+	color:white;
+	font-size: large;
+	width: 30px;
+	float:right;
+	margin-right:50px;
+	margin-top: -20px;
+	border-radius: 5px;
+}
