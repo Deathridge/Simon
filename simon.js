@@ -1,9 +1,9 @@
 var sequence = [];
-var sequenceLength = 5;
+var sequenceLength = 20;
 var sounds = ['https://s3.amazonaws.com/freecodecamp/simonSound1.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound2.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound3.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound4.mp3'];
 var soundsPlayers = [new Audio(sounds[0]), new Audio(sounds[1]), new Audio(sounds[2]), new Audio(sounds[3])];
 var sadTrombone = new Audio('http://www.freesound.org/data/previews/73/73581_634166-lq.mp3');
-var strict = false;
+var strict;
 newGame();
 
 var selections = [];
@@ -38,7 +38,6 @@ function removeLight(buttonLoc){
 function sumButtons(){
 	soundsPlayers[this.id-1].play();
 	selections.push(this.id);
-	console.log(selections);
 	if(selections.length == count){
 		if(isSolved(sequence, count, selections) && !isWinner(sequence, selections) && count < sequence.length){
 			count++;
@@ -58,10 +57,10 @@ function sumButtons(){
 		if(sequence[i] != selections[i] && !strict){
 			sadTrombone.play();
 			selections = [];
-			setTimeout(addLight,2000, 0);
+			setTimeout(addLight,2500, 0);
 		}else if(sequence[i] != selections[i] && strict){
 			sadTrombone.play();
-			setTimeout(newGame, 2000);
+			setTimeout(newGame, 2500);
 		}
 	}		
 	 
@@ -90,6 +89,7 @@ function newGame(){
 	sequence = [];
 	selections = [];
 	count = 1;
+	strict =false;
 	document.getElementById('counter').innerHTML = count;
 	var sequenceMember;
 	for (var i=0;i< sequenceLength;i++){
